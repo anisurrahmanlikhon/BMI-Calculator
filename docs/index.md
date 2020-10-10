@@ -1,37 +1,96 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      
+      
+      <style>
+      
+      body,html {
+    color: black;
+    display:block;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+form {
+    background-color: orange;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 5px black;
+    margin: 0;
+    padding: 10px;
+    width:100%;
+    max-width: 400px;
+}
+input {
+    box-shadow: 1px 1px 3px 1px black;
+    width: 100%;
+    text-align: center;
+}
 
-You can use the [editor on GitHub](https://github.com/Anisurrahmanlikohn/BMI/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+.submit {
+    display:inline-block;
+    color: white;
+    background-color: blue;
+    margin:0;
+    padding: 5px;
+    border: 0;
+    font-weight: bold;
+    width:100%;
+}
+.submit:hover {
+    color: blue;
+    background-color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#result {
+    border: 1px solid black;
+    padding: 2px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
 
-### Markdown
+h4 {
+    color: black;
+    text-shadow: -2px -2px 5px white;
+    
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+      
+      
+      </style>
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <form>
+            <h4>BMI Calculator</h4>
+            <input id="weight" type="text" placeholder="Your weight in kilograms" />
+            <br />
+            <br />
+            <input id="height" type="text" placeholder="Your height in meters" />
+            <br />
+            <br />
+            
+            <input class = "submit" type="button"  value="Submit" onclick="bmi()" />
+            <p id="result">Here will be your result</p>
+        </form>
+    </body>
+</html>
 
-- Bulleted
-- List
+<script>
+function bmi () {
+var height = Number(document.getElementById("height").value);
+var weight = Number(document.getElementById("weight").value);
+var result = weight / (height * height);
+document.getElementById("result").innerHTML = "Your bmi score is : " + result;
+}
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Anisurrahmanlikohn/BMI/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</script>
