@@ -1,2 +1,2 @@
 # BMI Calculator 
-https://anisurrahmanlikohn.github.io/BMI/
+https://anisurrahmanlikhon.github.io/BMI/
